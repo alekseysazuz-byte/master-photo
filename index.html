@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мастер Фото — Фотосалон и Профессиональная Фотолаборатория в Старом Осколе</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --text-color: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+        .logo p {
+            font-size: 12px;
+            color: #777;
+        }
+
+        .header-contacts {
+            text-align: right;
+        }
+
+        .header-contacts a {
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #004085;
+        }
+
+        /* Lab Feature Section */
+        .feature-lab {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .feature-lab h3 {
+            color: #fff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .feature-lab p {
+            max-width: 900px;
+            margin: 0 auto 15px auto;
+            font-size: 17px;
+        }
+
+        /* Services & Prices */
+        .services {
+            padding: 60px 0;
+        }
+
+        .services h3, .prices-table-section h3 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--light-color);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .card h4 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: var(--dark-color);
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 15px;
+        }
+
+        /* Tables */
+        .prices-table-section {
+            background: var(--light-color);
+            padding: 60px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Action Box (instead of broken form) */
+        .order-action {
+            padding: 60px 0;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .action-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--light-color);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .action-container p {
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: white;
+            padding: 40px 0;
+            font-size: 14px;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        footer a {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            header .container { flex-direction: column; text-align: center; }
+            .header-contacts { text-align: center; margin-top: 10px; }
+            .hero h2 { font-size: 28px; }
+            footer .container { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Мастер Фото</h1>
+                <p>Фотосалон & Профессиональная фотолаборатория</p>
+            </div>
+            <div class="header-contacts">
+                <a href="tel:+79511501030">+7 951 150 10 30</a>
+                <p>Ежедневно с 9:00 до 18:00 без выходных</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h2>Качественные фотоуслуги быстро и для любых объемов</h2>
+            <p>Делаем все виды документов качественно и очень быстро. Отправьте заказ онлайн через max или посетите наш салон!</p>
+            <a href="https://max.ru" class="btn" target="_blank">Написать в max</a>
+        </div>
+    </section>
+
+    <!-- Lab & Staff Feature -->
+    <section class="feature-lab">
+        <div class="container">
+            <h3>Наша гордость — Профессионализм и Оборудование</h3>
+            <p><strong>Высокотехнологичная фотолаборатория:</strong> У нас установлена передовая техника, которая идеально подходит для печати работ профессиональных фотографов. Она обеспечивает безупречную цветопередачу, максимальную четкость и обладает широким спектром уникальных функций.</p>
+            <p><strong>Команда мастеров:</strong> Наш салон — это не просто техника, это высококвалифицированные сотрудники, которые по-настоящему знают толк в своем деле. Мы любим свою работу, гарантируем безупречное качество каждого снимка и всегда готовы к выполнению нестандартных и сложных заказов любой сложности.</p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <h3>Услуги фото на документы</h3>
+            <div class="grid">
+                <div class="card">
+                    <h4>Фото на паспорт РФ</h4>
+                    <p>Профессиональный прокат, быстрая печать.</p>
+                    <div class="price">500 руб.</div>
+                </div>
+                <div class="card">
+                    <h4>Фото 3х4 (4-6 штук)</h4>
+                    <p>Для справок, пропусков, анкет и полного комплекта документов.</p>
+                    <div class="price">450 - 480 руб.</div>
+                </div>
+                <div class="card">
+                    <h4>Фото на визу</h4>
+                    <p>С точным соблюдением всех консульских требований.</p>
+                    <div class="price">500 руб.</div>
+                </div>
+                <div class="card">
+                    <h4>Загранпаспорт РФ</h4>
+                    <p>Для паспортов старого образца.</p>
+                    <div class="price">500 руб.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tables section -->
+    <section class="prices-table-section">
+        <div class="container">
+            <h3>Услуги печати и копицентра</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Услуга / Формат</th>
+                        <th>Стоимость / Особенности</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Черно-белая печать</strong> (1 прокат)</td>
+                        <td>12 руб.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Цветная печать</strong> (1 прокат)</td>
+                        <td>30 руб.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Печать фото</strong> (глянцевая, матовая или самоклеящаяся глянцевая)</td>
+                        <td>от 25 руб.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Сканирование документов</strong> (1 проход)</td>
+                        <td>20 руб.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Action Section instead of broken Email Form -->
+    <section class="order-action">
+        <div class="container">
+            <h3>Как сделать заказ?</h3>
+            <div class="action-container">
+                <p>Поскольку отправка писем напрямую с простых сайтов часто работает нестабильно, мы сделали процесс заказа максимально удобным и надежным через max или Email:</p>
+                <p><strong>Вариант 1:</strong> Нажмите на кнопку ниже, чтобы мгновенно связаться с нами в <strong>max</strong>, обсудить детали и скинуть файлы.</p>
+                <a href="https://max.ru" class="btn" target="_blank" style="margin-bottom: 25px;">Связаться через max</a>
+                <p><strong>Вариант 2:</strong> Отправьте ваши фотографии напрямую на нашу рабочую почту <a href="mailto:master-photo11@mail.ru" style="color: var(--primary-color); font-weight: bold;">master-photo11@mail.ru</a>. Обязательно укажите в письме ваш номер телефона для связи!</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
